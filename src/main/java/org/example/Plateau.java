@@ -18,7 +18,7 @@ public class Plateau {
         Coordinate ola = new Coordinate(2, 2);
         Coordinate Hello = new Coordinate(2, 2);
 
-
+ 
         System.out.println(ola.equals(Hello));
         System.out.println();
 
