@@ -12,13 +12,13 @@ public class Plateau {
     HashMap<Coordinate, Integer> mapa;
 
     public Plateau(Coordinate down, Coordinate up) {
-
+ 
         mapa = new HashMap<>();
         mapa.put(new Coordinate(2, 2), 0);
         Coordinate ola = new Coordinate(2, 2);
         Coordinate Hello = new Coordinate(2, 2);
 
- 
+
         System.out.println(ola.equals(Hello));
         System.out.println();
 
