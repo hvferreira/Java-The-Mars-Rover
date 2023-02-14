@@ -7,4 +7,16 @@ public class Vehicle {
     public Vehicle(Coordinate gps) {
         this.gps = gps;
     }
+
+    public Vehicle() {
+
+    }
+
+    public Coordinate getCoordinates() {
+        return gps;
+    }
+
+    public void SetCoordinates(Coordinate newPosition) {
+        this.gps = newPosition;
+    }
 }

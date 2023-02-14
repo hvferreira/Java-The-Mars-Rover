@@ -1,4 +1,4 @@
 package org.example;
 
-public class Earth {
+public class Earth extends Planet {
 }
