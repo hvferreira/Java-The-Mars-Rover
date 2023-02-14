@@ -77,4 +77,44 @@ public class Plateau {
 
         return true;
     }
+
+    public void printPlateau() {
+        for (int i = up.getX(); i >= down.getX(); i--) {
+            for (int j = down.getY(); j <= up.getY(); j++) {
+                if (coordinateIsEmpty(new Coordinate(i, j))) {
+                    System.out.print("\t" + "-");
+                } else {
+                    System.out.print("\t" + "X");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public void rotateGoForward(String orientation) {
+
+        while (true) {
+
+        }
+    }
+
+    private void directionL(Rover rover ) {
+
+        switch (rover.getFacing()) {
+            case Direction.N-> rover.setFacing(Direction.W);
+            case Direction.W   -> rover.setFacing(Direction.S);
+            case Direction.S-> rover.setFacing(Direction.E);
+            case Direction.E -> rover.setFacing(Direction.N);
+
+        }
+    }
+
+    private int directionR(Rover rover, char orientation ) {
+
+        return switch (orientation) {
+            case 'L'-> 6;
+            case 'R'                -> 7;
+
+        }
+    }
 }

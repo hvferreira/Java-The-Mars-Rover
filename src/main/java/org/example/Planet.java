@@ -4,6 +4,7 @@ public class Planet {
 
     private Plateau plateau;
 
-    public Planet() {
+    public Planet(Plateau plateau) {
+        this.plateau = plateau;
     }
 }
