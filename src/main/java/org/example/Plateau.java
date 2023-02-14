@@ -8,6 +8,9 @@ public class Plateau {
     private Coordinate up;
     private ArrayList<Vehicle> vehiclePerFields;
 
+    public Plateau() {
+    }
+
     public Plateau(Coordinate down, Coordinate up) {
 
         if (verifyRightCoordinates(down, up)) {
@@ -65,7 +68,7 @@ public class Plateau {
         return true;
     }
 
-    public boolean verifyNewCoordinateInSidePlateau(Coordinate roverCoordinate) {
+    public boolean verifyRoverCoordinateInSidePlateau(Coordinate roverCoordinate) {
 
         if (((down.getX() <= roverCoordinate.getX()) && down.getY() <= roverCoordinate.getY() &&
                 (up.getX() >= roverCoordinate.getX()) && (up.getY() >= roverCoordinate.getY()))) {
