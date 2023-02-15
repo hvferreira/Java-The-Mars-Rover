@@ -6,28 +6,28 @@ was developed in Java 17.
 
 ## Key Features of Solution
 
-+Classes: Rover, Mars, Plateau, Earth, Coordinate, Direction.
-+Attributes: Cameras, Arms, X and Y, N, S, E and W
-+Restrictions: Square/Rectangle, verify invalid things and missing inputs
++ Classes: Rover, Mars, Plateau, Earth, Coordinate, Direction.
++ Attributes: Cameras, Arms, X and Y, N, S, E and W
++ Restrictions: Square/Rectangle, verify invalid things and missing inputs
 
 ## Assumptions
 
-The surface of Mars is represented by a Plateau.
-Plateau is a square/rectangle based on the positive quadrant.
-Rovers navigate the Plateau.
-Coordinates: X, Y.
-Cardinal Compass points: N, S, E, W.
-Rotation/Move:
-L: Rotates 90 degrees to the left.
-R: Rotates 90 degrees to the right.
-M: Move forward.
++ The surface of Mars is represented by a Plateau.
++ Plateau is a square/rectangle based on the positive quadrant.
++ Rovers navigate the Plateau.
++ Coordinates: X, Y.
++ Cardinal Compass points: N, S, E, W.
++ Rotation/Move:
+    + L: Rotates 90 degrees to the left.
+    + R: Rotates 90 degrees to the right.
+    + M: Move forward.
 
 ## Approaches
 
-Mars → Plateau → Rovers → Coordinates → Direction
-Mars has Plateau.
-Plateau has a List of Rovers and size.
-The rover has direction and coordinates.
++ Mars → Plateau → Rovers → Coordinates → Direction
++ Mars has Plateau.
++ Plateau has a List of Rovers and size.
++ The rover has direction and coordinates.
 
 ## UML
 
@@ -35,8 +35,8 @@ The rover has direction and coordinates.
 
 ## Future Thoughts
 
-Add planets.
-Add vehicles.
-Add different plateaus.
-Add skins with different obstacles.
-Add features to the vehicles.
++ Add planets.
++ Add vehicles.
++ Add different plateaus.
++ Add skins with different obstacles.
++ Add features to the vehicles.
