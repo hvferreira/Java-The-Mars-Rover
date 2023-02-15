@@ -64,12 +64,28 @@ class PlateauTest {
     void verifyRoverCoordinateInSidePlateau() {
         Plateau plateau = new Plateau(new Coordinate(0, 0), new Coordinate(5, 5));
 
-        assertTrue(plateau.verifyRoverCoordinateInSidePlateau(new Coordinate(-1, 0)));
-        assertTrue(plateau.verifyRoverCoordinateInSidePlateau(new Coordinate(5, 6)));
-        assertTrue(plateau.verifyRoverCoordinateInSidePlateau(new Coordinate(6, 6)));
-        assertTrue(plateau.verifyRoverCoordinateInSidePlateau(new Coordinate(-1, -1)));
-        assertFalse(plateau.verifyRoverCoordinateInSidePlateau(new Coordinate(0, 0)));
-        assertFalse(plateau.verifyRoverCoordinateInSidePlateau(new Coordinate(5, 5)));
+        assertFalse(plateau.verifyRoverCoordinateInSidePlateau(new Coordinate(-1, 0)));
+        assertFalse(plateau.verifyRoverCoordinateInSidePlateau(new Coordinate(5, 6)));
+        assertFalse(plateau.verifyRoverCoordinateInSidePlateau(new Coordinate(6, 6)));
+        assertFalse(plateau.verifyRoverCoordinateInSidePlateau(new Coordinate(-1, -1)));
+
+        assertTrue(plateau.verifyRoverCoordinateInSidePlateau(new Coordinate(0, 0)));
+        assertTrue(plateau.verifyRoverCoordinateInSidePlateau(new Coordinate(5, 5)));
+
+    }
+
+    @Test
+    void rotateGoForward() {
+        Plateau plateau = new Plateau(new Coordinate(0, 0), new Coordinate(5, 5));
+        Rover rover = new Rover(Direction.W, new Coordinate(4, 3));
+
+        plateau.rotateGoForward(rover, "MRM");
+        assertTrue(rover.getCoordinates().equals(new Coordinate(3, 4)));
+        assertTrue(rover.getFacing() == Direction.N);
+
+        plateau.rotateGoForward(rover, "MLMML");
+        assertTrue(rover.getCoordinates().equals(new Coordinate(1, 5)));
+        assertTrue(rover.getFacing() == Direction.S);
 
     }
 }

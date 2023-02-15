@@ -15,7 +15,7 @@ class MarsTest {
         Mars mars = new Mars(plateau);
 
         Direction facing = Direction.N;
-        Coordinate roverCoordinates1 = new Coordinate(2, 2);
+        Coordinate roverCoordinates1 = new Coordinate(4, 3);
         Coordinate roverCoordinates2 = new Coordinate(1, 1);
         Rover rover1 = new Rover(facing, roverCoordinates1);
         Rover rover2 = new Rover(facing, roverCoordinates2);
@@ -24,5 +24,12 @@ class MarsTest {
         plateau.addRover(rover2);
         plateau.addRover(rover3);
         plateau.printPlateau();
+        plateau.rotateGoForward(rover1, "MLMRM");
+        plateau.rotateGoForward(rover2, "MMM");
+        plateau.rotateGoForward(rover3, "LR");
+        plateau.printPlateau();
+
+        //assertEquals(2, rover1.getCoordinates().getX());
+        //assertEquals(3, rover1.getCoordinates().getY());
     }
 }
