@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PlateauTest {
 
     @Test
-    void verifyRightCoordinates() {
+    void verifyRightCoordinates() {// for plateau
         Plateau plateau = new Plateau();
         assertTrue(plateau.verifyRightCoordinates(new Coordinate(0, 0), new Coordinate(1, 1)));
         assertFalse(plateau.verifyRightCoordinates(new Coordinate(0, 0), new Coordinate(0, 0)));
@@ -50,13 +50,12 @@ class PlateauTest {
         Vehicle rover = new Vehicle(new Coordinate(2, 2));
         plateau.addRover(rover);
 
-        assertFalse(plateau.coordinateIsEmpty(new Coordinate(2, 2)));//confirm rover in positon
-
+        assertFalse(plateau.coordinateIsEmpty(new Coordinate(2, 2)));//confirm rover in position
 
         assertTrue(plateau.moveVehicle(rover, new Coordinate(1, 1)));//moving rover
 
         assertTrue(plateau.coordinateIsEmpty(new Coordinate(2, 2)));// old position the rover
-        assertFalse(plateau.coordinateIsEmpty(new Coordinate(1, 1)));// new postion the rover
+        assertFalse(plateau.coordinateIsEmpty(new Coordinate(1, 1)));// new position the rover
 
     }
 
