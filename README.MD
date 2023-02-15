@@ -6,9 +6,9 @@ was developed in Java 17.
 
 ## Key Features of Solution
 
-Classes: Rover, Mars, Plateau, Earth, Coordinate, Direction.
-Attributes: Cameras, Arms, X and Y, N, S, E and W
-Restrictions: Square/Rectangle, verify invalid things and missing inputs
++Classes: Rover, Mars, Plateau, Earth, Coordinate, Direction.
++Attributes: Cameras, Arms, X and Y, N, S, E and W
++Restrictions: Square/Rectangle, verify invalid things and missing inputs
 
 ## Assumptions
 
